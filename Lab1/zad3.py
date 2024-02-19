@@ -4,4 +4,4 @@ dni = int(input("Podaj ilość dni "))
 
 for i in range(dni):
     poczatkowa += poczatkowa*dzienny_przyrost
-    print(f"Dzień {i}: {poczatkowa:.3f}")
+    print(f"Dzień {i+1}: {poczatkowa:.3f}")
