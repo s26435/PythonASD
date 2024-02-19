@@ -1,3 +1,7 @@
+"""
+Jan Wolski 2/19/24
+Program który po podaniu 3 liczb powie czy jest to trójak pitagoryjska
+"""
 def czy_trojka_pitagorejska(a, b, c):
     sorted_numbers = sorted([a, b, c])
     if sorted_numbers[0]**2 + sorted_numbers[1]**2 == sorted_numbers[2]**2:
