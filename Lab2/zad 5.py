@@ -1,3 +1,8 @@
+"""
+Jan Wolski 2/26/24
+Zamiana liczby dziesiętnej na binarną
+"""
+
 def binary(num):
     if num == 0:
         return '0'

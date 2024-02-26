@@ -11,7 +11,7 @@ hex_num = 0x1FF # szesnastkowa
 # konwersja liczby na łańcuch binarny
 a = 10
 print(bin(a)) # dec -> binarna
-print(oct(a)) # dec -> óemkowa
+print(oct(a)) # dec -> ósemkowa
 print(hex(a)) # dec -> szesnastkowa
 
 # działania logiczne
