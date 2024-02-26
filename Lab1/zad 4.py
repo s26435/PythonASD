@@ -1,3 +1,9 @@
+"""
+Jan Wolski 2/9/24
+Zliczanie częstości występowania liter w file.txt
+i przedstawianie go na wykresie słupkowym.
+"""
+
 import matplotlib.pyplot as plt
 
 with open("file.txt") as file:
