@@ -7,7 +7,7 @@ def binary(num):
         r = num % 2
         binary_num = str(r) + binary_num
         num //= 2
-
+    
     return binary_num
 
 print(binary(10))
