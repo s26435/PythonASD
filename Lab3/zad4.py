@@ -34,5 +34,5 @@ def miejsceZerowe(funkcja, a, b, n, epsilon):
             break
     return x
 
-n = 4
-print(miejsceZerowe(pierwiastek_liczby, 0, 3, n, 1e-10))
+n = 9
+print(miejsceZerowe(pierwiastek_liczby, 0, 5, n, 1e-10))
