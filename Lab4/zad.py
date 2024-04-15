@@ -24,6 +24,25 @@ def bubble_sort(arr):
     return arr
 
 
+def quick_sort(L):
+    if len(L) <= 1:
+        return L
+    pivot = L[0]
+    less = []
+    for x in L:
+        if x < pivot:
+            less.append(x)
+    equal = []
+    for x in L:
+        if x == pivot:
+            equal.append(x)
+    greater = []
+    for x in L:
+        if x > pivot:
+            greater.append(x)
+    return quick_sort(less) + equal + quick_sort(greater)
+
+
 def merge_sort(arr):
     if len(arr) > 1:
         mid = len(arr) // 2
@@ -68,28 +87,19 @@ if __name__ == "__main__":
     dict_merge = {}
     dict_sel = {}
     dic_sort = {}
-    for i in range(40):
-        dict_buble[i+1] = take(bubble_sort, i*1000)
+    dic_quick = {}
+    for i in range(1000):
+        # dict_buble[i+1] = take(bubble_sort, i*1000)
         dict_merge[i + 1] = take(merge_sort, i * 1000)
-        dict_sel[i+1] = take(selection_sort, i * 1000)
+        # dict_sel[i+1] = take(selection_sort, i * 1000)
         dic_sort[i + 1] = take(sorted, i * 1000)
+        dic_quick[i + 1] = take(quick_sort, i * 1000)
         print(i + 1)
 
-    values = list(dict_buble.values())
-    plt.plot(range(len(dict_buble)), values, marker='o', linestyle='-', color='b', label='bublesort')
-    plt.xlabel('Ilość elementów tablicy(w tys.)')
-    plt.ylabel('Czas(s)')
-    values = list(dict_merge.values())
-    plt.plot(range(len(dict_merge)), values, marker='o', linestyle='-', color='r', label='mergesort')
-    plt.xlabel('Ilość elementów tablicy(w tys.)')
-    plt.ylabel('Czas(s)')
-    values = list(dict_sel.values())
-    plt.plot(range(len(dict_sel)), values, marker='o', linestyle='-', color='y', label='selection sort')
-    plt.xlabel('Ilość elementów tablicy(w tys.)')
-    plt.ylabel('Czas(s)')
-    plt.title('Wykres dla sortowanie przez selekcję')
-    values = list(dic_sort.values())
-    plt.plot(range(len(dic_sort)), values, marker='o', linestyle='-', color='g', label='funkcja \'sorted\'')
+    plt.plot(range(len(dic_quick)), list(dic_quick.values()), marker='', linestyle='-', color='b', label='quicksort')
+    plt.plot(range(len(dict_merge)), list(dict_merge.values()), marker='', linestyle='-', color='r', label='mergesort')
+    plt.plot(range(len(dic_sort)), list(dic_sort.values()), marker='', linestyle='-', color='g',
+             label='funkcja \'sorted\'')
     plt.xlabel('Ilość elementów tablicy(w tys.)')
     plt.ylabel('Czas(s)')
     plt.title('Porównanie czasu wykonania algorytmów sortujących')
