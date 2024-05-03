@@ -17,11 +17,24 @@ def contains(text, mask):
     return ''.join(tab)  # zwracamy tablicę zamienioną na string
 
 
+
+
+
 def looping(text):
-    text = text.replace(' ', '').lower()
-    for i in range(pow(2, len(text))):  # generowanie kluczy od 1-d 2 do potęgi długość tekstu (ilość permutacji w
-        # pierścieniu mod 2)
-        print(f"nr.{i}={contains(text[::-1], i)[::-1]}")  # sprawdzanie klucza dla kazdego z kluczy
+    dict = {}
+    text = text.replace(' ', '').lower()  # usuwanie spacji i dużych liter
+    count = 0
+
+    for i in range(pow(2, len(text))):  # generowanie kluczy od 1-d 2 do potęgi długość tekstu
+        temp = contains(text[::-1], i)[::-1]
+        # print(f"nr.{i}={temp}")  # sprawdzanie klucza dla kazdego z kluczy
+        if not temp in dict:
+            dict[temp] = 1
+        else:
+            dict[temp] = dict.get(temp)+1
+            count += 1
+    return dict
 
 
-looping("Król")
+print(looping("boażena").keys())
+

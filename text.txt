@@ -1,0 +1,120 @@
+1. Wskaz klasyfikacje biologiczna dla roslin:
+Gatunek,Rodzaj,Rodzina,Rząd,Klasa,Gromada, Krolestwo
+Gatunek, Rodzaj, Rodzina, Rząd, Gromada, Typ, Krolestwo
+Gatunek, Rodzaj, Rząd, Gromada, Typ, Krolestwo
+Gatunek, Rodzaj, Rodzina, Gromada, Klasa,  Rząd, Krolestwo
+kG
+2. Na jaki kolor barwi sie gram-dodatnia bakteria?
+rozowo
+czerwono
+niebiesko
+fioletowo
+nN
+3. Wskaz szereg w kt�lrym wymieniono tylko bakterie nalezace do Pseudomonadota:
+Eschericha coli, Staphyloccocus aureus
+Chlamydia trachomantis, Eschericha coli
+Eschericha coli, Salmonella enterica
+Staphyloccocus aureus, Chlamydia trachomantis
+mC
+4. Wskarz tylko cechy Bacillota:
+Większosc G+, Beztlenowy, hemolizuje, gronkowce
+Większosc G-, Beztlenowy, paleczki
+Większosc G+, tlenowy, hemolizuje, gronkowce
+Większosc G-, tlenowy, hemolizuje, gronkowce
+kV
+5. Wskaz bakterie obligatoryjnie wewnatrz komorkowe:
+Pseudomonadota
+Chlamydiota
+Methanobacteria
+Bacillota
+lP
+6. Komorka jakiego organimzu zostala wchlonieta w wyniku wtornej endosymbiozy typu III?
+Chlorophyta
+Krasnorostow
+Ramienic
+Chloroplastida
+nW
+7. Co to splatek?
+splatane kozenie
+plecha zielenic
+mlodociana faza rozwoju gametofitu
+lagiewka pylkowa
+mA
+8. Jakie rosliny sa grupa przejsciowa miedzy roslinami ladowymia a wodnymi?
+Zielenice
+Chlorophyta
+Ramienice
+Krasnorosty
+mH
+9. Jakie jest pokolenie dominujace u charopyta?
+gametofit
+sporofit
+nie ma dominujacego
+nie wystepuje przemiana pokolen
+nS
+10. Jaka postac przyjmuje gametofit zenski u Pinophyta?
+bielma pierwotnego
+mikrospory
+nagich nasion
+owocu
+kD
+11. Magnoliopsida to:
+dwuliscienne
+jednoliscienne
+owoce u Magnoliophtya
+gametofit zenski
+kU
+12. Gabki to inaczej:
+Cnidaria
+Porifera
+Nematoda :3
+Annelida
+lW
+13. Warstwa zewnetrzna u gabek to:
+pinakoderma
+polip
+knidoblast
+parechymia
+kF
+14. Przemiane Nematoda przedstawia szereg:
+Jajo -> trzy stadia larwalne -> postac dorosla
+jajo -> postac dorosla
+larwa -> jajo -> postac dorosla
+jajo -> cztery stadia larwalne -> postac dorosla
+nT
+15. Z jakiej substancji jest zrobiony szkielet Antrophoda?
+Wapn
+Krzem
+Wapnian Zelaza
+Chityna
+nX
+16. Czy chordata sa mozna okreslic mianem metamerii?
+nie
+tak
+nie ma czegos takiego
+co to do chuja pana jest metameria?
+lX
+17. Gdzie u sluzincow znajduja sie neuromasty
+zebrane sa wzdluz ciala w linie boczna
+sa rozproszone po calej powierzchni ciala
+sluzince nie maja neuromastow
+w pecherzu plawnym
+lF
+18. Ile komor i ile przedsionkow ma serce ryb?
+1 komora 1 przedsionek
+2 komory 2 przedsionki z przerwa, w ktoer miesza sie krew natlenowana z nienatlenowana
+2 przedsionki 2 komory
+1 komora 2 przedsionki
+kU
+19. Co odroznia plazy od gadow?
+jajorodnosc
+rozna ilosc przedsionkow
+struna grzbietowa
+potrzeba wody do rozmnazania
+nL
+20. Co to komorczak?
+duza komorka
+komorka ze zwiekszona iloscia dna w jadrze
+komorka grzybowa z duza iloscia chityny w scianie
+komorka z kilkoma jadrami
+nB

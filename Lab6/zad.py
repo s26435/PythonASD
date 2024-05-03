@@ -1,64 +1,65 @@
-import os
+"""
+
+"""
+import random
 import time
+import matplotlib.pyplot as plt
+
+def smooth_array(arr):
+    smoothed_arr = []
+    for i in range(len(arr)):
+        if i == 0 or i == len(arr) - 1:
+            smoothed_arr.append(arr[i])  # Zachowaj pierwszy i ostatni element niezmieniony
+        else:
+            smoothed_value = (arr[i - 1] + arr[i] + arr[i + 1]) / 3  # Uśrednianie trzech sąsiednich elementów
+            smoothed_arr.append(smoothed_value)
+    return smoothed_arr
 
 
-def clear_console():
-    os.system('cls' if os.name == 'nt' else 'clear')
+def take_time_random(fun, size):
+    target = random.randint(1, 1000000)
+    arr = [random.randint(1, 1000000) for _ in range(size)]
+    start_time = time.time()
+    fun(target, arr.copy())
+    fun_time = time.time() - start_time
+    return fun_time
 
 
-def initialize_board(rows, cols):
-    import random
-    return [[random.choice([0, 1]) for _ in range(cols)] for _ in range(rows)]
+def linear_search(target, tab):
+    for i in range(len(tab)):
+        if tab[i] == target:
+            return i
+    return -1
 
 
-def print_board(board):
-    for row in board:
-        print(' '.join(['■' if cell else ' ' for cell in row]))
-    print()
+def binsearch(target, tab):
+    start = 0
+    end = len(tab) - 1
+    while start <= end:
+        mid = (start + end) // 2
+        if target < tab[mid]:
+            end = mid - 1
+        elif target > tab[mid]:
+            start = mid + 1
+        else:
+            return mid
+    return -1
+
+bins = []
+lin = []
+
+for i in range(1000, 1000000, 1000):
+    bins.append(take_time_random(binsearch, i))
+    lin.append(take_time_random(linear_search, i))
+    print(f'{i},')
 
 
-def count_neighbors(board, x, y):
-    rows, cols = len(board), len(board[0])
-    count = 0
-    for i in range(-1, 2):
-        for j in range(-1, 2):
-            if i == 0 and j == 0:
-                continue
-            if 0 <= x + i < rows and 0 <= y + j < cols:
-                count += board[x + i][y + j]
-    return count
 
 
-def update_board(board):
-    new_board = [[0 for _ in range(len(board[0]))] for _ in range(len(board))]
-    for i in range(len(board)):
-        for j in range(len(board[0])):
-            neighbors = count_neighbors(board, i, j)
-            if board[i][j] == 1:
-                if neighbors < 2 or neighbors > 3:
-                    new_board[i][j] = 0
-                else:
-                    new_board[i][j] = 1
-            else:
-                if neighbors == 3:
-                    new_board[i][j] = 1
-    return new_board
-
-
-def main(rows, cols, generations, delay):
-    board = initialize_board(rows, cols)
-    for _ in range(generations):
-        clear_console()
-        print("Generation:", _ + 1)
-        print_board(board)
-        board = update_board(board)
-        time.sleep(delay)
-
-
-if __name__ == "__main__":
-    rows = 20
-    cols = 20
-    generations = 50
-    delay = 0.5
-
-    main(rows, cols, generations, delay)
+plt.plot(range(len(bins)), smooth_array(bins), marker='', linestyle='-', color='g', label='szukanie binarne:')
+plt.plot(range(len(lin)), smooth_array(lin), marker='', linestyle='-', color='r', label='szukanie liniowe:')
+plt.xlabel('Ilość elementów tablicy(w tys.)')
+plt.ylabel('Czas(s)')
+plt.title('Porównanie czasu wykonania algorytmów wyszukiwania')
+plt.legend()
+plt.savefig("compare.jpg")

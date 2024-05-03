@@ -15,4 +15,4 @@ def binary(num):
     
     return binary_num
 
-print(binary(10))
+print(binary(2137))
