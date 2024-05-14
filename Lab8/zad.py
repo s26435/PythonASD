@@ -99,6 +99,7 @@ def smooth_array(array, window_size=3):
 
 
 if __name__ == "__main__":
+    plt.style.use("ggplot")
     length = 300
     args = {wyszukiwanie_KR, wyszukiwanie_KMP, wyszukiwanie_naiwne}
     resultsKR = []
