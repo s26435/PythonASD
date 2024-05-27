@@ -14,6 +14,23 @@ class Stack:
     def is_empty(self):
         return len(self.items) == 0
 
+
+def czy_nawiasy_sa_poprawne(ciag):
+    stos = Stack()
+    pary_nawiasow = {')': '(', ']': '[', '}': '{'}
+
+    for znak in ciag:
+        if znak in pary_nawiasow.values():
+            stos.push(znak)
+        elif znak in pary_nawiasow.keys():
+            if not stos.is_empty() and stos.pop() == pary_nawiasow[znak]:
+                continue
+            else:
+                return False
+
+    return stos.is_empty()
+
+
 def evaluate_expression(expression):
     stack = Stack()
     operators = {'+', '-', '*', '/'}
@@ -54,6 +71,12 @@ def main():
         print("Wynik:", result)
     except (ValueError, IndexError) as e:
         print("Błąd:", e)
+
+    ciag1 = "{[()()]}"
+    print(czy_nawiasy_sa_poprawne(ciag1))
+
+    ciag2 = "{[(])}"
+    print(czy_nawiasy_sa_poprawne(ciag2))
 
 if __name__ == "__main__":
     main()
